@@ -1,0 +1,9 @@
+files:
+  - name: /tmp/test1.txt
+    checksum: '"da39a3ee5e6b4b0d3255bfef95601890afd80709" /tmp/test1.txt '
+  - name: /tmp/test2.txt
+    checksum: '"d41d8cd98f00b204e9800998ecf8427e" /tmp/test2.txt'
+  - name: /tmp/test3.txt
+    checksum: '"d41d8cd98f00b204e9800998ecf8427e" /tmp/test3.txt'
+  - name: /tmp/test4.txt
+    checksum: '"d41d8cd98f00b204e9800998ecf8427e" /tmp/test4.txt'

@@ -1,0 +1,19 @@
+- hosts: localhost
+  become: true
+  ignore_errors: true
+  vars_files:
+   - files_list.yml
+  tasks:
+   - name: check current checksum
+     stat:
+       path: "{{ item.name }}"
+     with_items: "{{ files }}"
+     register: test
+   - debug:
+       msg: "checksum matched"
+     when: '"item.item.checksum" == "item.stat.checksum"'
+     loop: "{{test.results}}"
+#   - debug:
+#       msg: "checksum not matched"
+#     when: '"{{item.item.checksum}}" != "{{item.stat.checksum}}"'
+#     loop: "{{test.results}}"
